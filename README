@@ -1,0 +1,27 @@
+Simple, portable, auditable, secure password generator.
+
+Requires a standard C compiler and a source of randomness, like /dev/random
+
+Program works by reading input stream and writing any printable characters 
+until the desired length is reached.
+
+For environments that need less password complexity, you may prefer to use
+'isalphanum()' instead of 'isprint()'.
+
+--
+USAGE
+
+Compile:
+i.e.
+gcc -o password password.c
+
+The program should compile cleanly even with:
+gcc -Wall -Wextra -ansi -pedantic -o password password.c
+
+Run:
+./password
+
+--
+Written by Rowan James (Phere Development Pty. Ltd.) 2011
+
+Free for any use.
